@@ -1,9 +1,15 @@
 <template>
   <div>
-    <h2>Product details for {{ id }}</h2>
+    <h2> {{ product.title }}</h2>
+    <img :src="product.image" :alt="`the image of ${product.title}`">
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, soluta
-      itaque odit assumenda voluptatum deleniti doloribus.
+       description : {{ product.description }} 
+    </p>
+    <p>
+       price : {{ product.price }} €
+    </p>
+    <p>
+       ref : {{ product.id }}
     </p>
   </div>
 </template>
@@ -13,6 +19,13 @@
   definePageMeta({
     layout: 'products'
  })
+
+ const uri = `https://fakestoreapi.com/products/${id}`
+
+ //fetch the product
+const { data : product } = await useFetch(uri, {key: id})
+console.log(product)
+
 </script>
 
 <style scoped></style>
