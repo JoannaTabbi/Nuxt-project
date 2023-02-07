@@ -1,6 +1,7 @@
 <template>
   <div>
     <h2>Homepage</h2>
+    <div>{{ data.message }}</div>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
       officiis asperiores tempora, animi quas voluptate culpa molestias,
@@ -10,7 +11,13 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+  // fetching data from internal server api
+  const { data } = await useFetch('/api/user?name=Mario', {
+    method: 'post',
+    body: { age : 30 }
+  })
+</script>
 
 <style scoped>
   h2 {
