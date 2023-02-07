@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     shim: false
   },
   modules: ["@nuxtjs/tailwindcss"],
+  // set global meta data applied by default to any page
   app: {
     head: {
       title: 'Nuxt project',
