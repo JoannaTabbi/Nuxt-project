@@ -33,7 +33,7 @@
   //  method: 'post',
   //  body: { age : 30 }
   //})
-  const { data } = await useFetch('/api/user')
+  const { data } = await useFetch('/api/currency/USD')
   
 
 </script>
