@@ -15,6 +15,15 @@
  // fetching products from fakestoreapi
  const { data: products } = await useFetch('https://fakestoreapi.com/products')
 
+ //override global meta data on individual page with useHead() function
+ useHead({
+  title: 'Nuxt project | merch',
+  meta: [
+    { name: 'description', content: 'Nuxt basic pratical exercice : merch page'}
+  ]
+ }
+ )
+
 </script>
 
 <style scoped>

@@ -1,5 +1,11 @@
 <template>
   <div>
+    <!-- override global meta data on individual page with built-in Nuxt Head component.
+    Easy way to display dynamic data -->
+    <Head>
+      <Title>Nuxt project | {{ product.title }}</Title>
+      <Meta name="description" :content="product.description" />
+    </Head>
    <ProductDetails :product="product" />
   </div>
 </template>
