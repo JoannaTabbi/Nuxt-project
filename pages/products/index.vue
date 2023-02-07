@@ -7,6 +7,7 @@
 </template>
 
 <script setup>
+// applies the customised layout instead of the default one
  definePageMeta({
     layout: 'products'
  })
