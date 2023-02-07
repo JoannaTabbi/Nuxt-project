@@ -7,6 +7,11 @@
             <li><NuxtLink to="/">Homepage</NuxtLink></li>
             <li><NuxtLink to="/about">About</NuxtLink></li>
             <li><NuxtLink to="/products" class="btn">Products</NuxtLink></li>
+            <!--  link to the page that doesn't exist to demonstrate 
+            error handling while error created on the browser (we're not requesting 
+            page on the server)  see: fatal option set to true on createError, 
+            page products/[id].vue -->
+            <li><NuxtLink to="/products/abc" class="btn">Products abc</NuxtLink></li>
           </ul>
         </nav>
       </header>
